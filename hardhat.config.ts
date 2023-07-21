@@ -66,6 +66,24 @@ const config: HardhatUserConfig = {
       saveDeployments: true,
       gasMultiplier: 2,
     },
+    bscmainnet: {
+      url: "https://bsc-dataseed.binance.org/",
+      accounts: [process.env.NETWORK_MAINNET_PRIVATE_KEY],
+      chainId: 56,
+      live: true,
+      saveDeployments: true,
+      gasMultiplier: 2,
+    },
+
+    polygonmainnet: {
+      url: "https://polygon-bor.publicnode.com",
+      accounts: [process.env.NETWORK_MAINNET_PRIVATE_KEY],
+      chainId: 137,
+      live: true,
+      saveDeployments: true,
+      gasMultiplier: 2,
+    },
+
     polygontestnet: {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [process.env.NETWORK_TESTNET_PRIVATE_KEY],
@@ -87,8 +105,9 @@ const config: HardhatUserConfig = {
       mainnet: process.env.BLOCK_EXPLORER_API_KEY,
       rinkeby: process.env.BLOCK_EXPLORER_API_KEY,
       sepolia: process.env.BLOCK_EXPLORER_API_KEY,
+      bsc: '9GUFJUEMXS4CF943XEQTSMXGRRJNT4BF5I',
       // Polygon
-      polygon: process.env.BLOCK_EXPLORER_API_KEY,
+      polygon: 'AJK455XQA4UKRFKN323C8V58NXPWBGUG6M',
       polygonMumbai: 'AJK455XQA4UKRFKN323C8V58NXPWBGUG6M',
     },
   },

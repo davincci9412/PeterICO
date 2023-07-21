@@ -11,7 +11,7 @@ contract PeterICO is Ownable {
     IERC20 public MDSE_token;
     uint public startTime;
     uint public endTime;
-    uint public tokenEthPrice = 0.000026 ether; //  1 MDSE = 0.05USD
+    uint public tokenEthPrice = 0.6 ether; //  1 MDSE = 0.6 Matic
     uint public hardCap;
     uint public ethRaised;
     address deployer;
@@ -40,7 +40,7 @@ contract PeterICO is Ownable {
         hardCap = tokenSale.tokenForSale;
     }
     modifier depositRequirements() {
-        require(msg.value >= 0.0026 ether, "Minimum 0.0026 ETH");  // minimum 5USD- 100MDSE
+        require(msg.value >= 0.6 ether, "Minimum 0.6 Matic");
         _;
     }
     modifier onlyowner() {
@@ -87,10 +87,10 @@ contract PeterICO is Ownable {
         endTime = _endTime;
         return true;
     }
-    function updateMSDEAddress(address _msde) public onlyowner {
+    function updateMDSEAddress(address _msde) public onlyowner {
         MDSE_token = IERC20(_msde);
     }
-    function updateMSDEPrice(uint256 _amount) public onlyowner {
+    function updateMDSEPrice(uint256 _amount) public onlyowner {
         tokenEthPrice = _amount;
     }
     //==================================================================================
