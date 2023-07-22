@@ -105,10 +105,11 @@ const config: HardhatUserConfig = {
       mainnet: process.env.BLOCK_EXPLORER_API_KEY,
       rinkeby: process.env.BLOCK_EXPLORER_API_KEY,
       sepolia: process.env.BLOCK_EXPLORER_API_KEY,
-      bsc: '9GUFJUEMXS4CF943XEQTSMXGRRJNT4BF5I',
+      //bsc
+      bsc: process.env.BSCSCAN_API_KEY,
       // Polygon
-      polygon: 'AJK455XQA4UKRFKN323C8V58NXPWBGUG6M',
-      polygonMumbai: 'AJK455XQA4UKRFKN323C8V58NXPWBGUG6M',
+      polygon: process.env.POLYGONSCAN_API_KEY,
+      polygonMumbai: process.env.POLYGONSCAN_API_KEY,
     },
   },
 };
